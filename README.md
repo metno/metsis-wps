@@ -1,4 +1,4 @@
 # metsis-wps
 
-Arctic data centre WPS services
+Arctic Data Centre Web Processing Services for time series plotting, CSV data download and data transformations
 
