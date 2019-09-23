@@ -1,0 +1,124 @@
+[TimeSeries]
+ Title = Plot time series.
+ Abstract = Plots time series data provided through OPeNDAP streams.
+ processVersion = 2
+ storeSupported = true
+ statusSupported = true
+ serviceProvider = TimeSeries
+ serviceType = Python
+ <MetaData>
+   title = Demo
+ </MetaData>
+  <DataInputs>
+  [odurl]
+   Title = OPeNDAP URL
+   Abstract = The URL of OPeNDAP stream. Exactly one URL is required.
+   minOccurs = 1
+   maxOccurs = 1
+   <MetaData>
+    title = OPeNDAP URL
+   </MetaData>
+   <LiteralData>
+    DataType = string
+    <Default>
+    </Default>
+    <Supported>
+    </Supported>
+   </LiteralData>
+  [xvar]
+   Title = xvar
+   Abstract = The variable to plot on the x-axis. This is the OPeNDAP short_name of the variable.
+   minOccurs = 1
+   maxOccurs = 1
+   <MetaData>
+    title = xvar
+   </MetaData>
+   <LiteralData>
+    DataType = string
+    <Default>
+    </Default>
+    <Supported>
+    </Supported>
+   </LiteralData>
+  [yvar]
+   Title = yvar
+   Abstract = The variable to plot on the y-axis. This is the OPeNDAP short_name of the variable.
+   minOccurs = 1
+   maxOccurs = 1
+   <MetaData>
+    title = yvar
+   </MetaData>
+   <LiteralData>
+    DataType = string
+    <Default>
+    </Default>
+    <Supported>
+    </Supported>
+   </LiteralData>
+   [everyNth]
+    Title = everyNth
+    Abstract = This value is used to plot a subset of the data. Every "everyNth" point will be used. Set this to 1 to plot every data point.
+    minOccurs = 1
+    maxOccurs = 1
+    <MetaData>
+     title = everyNth
+    </MetaData>
+    <LiteralData>
+     DataType = integer
+     <Default>
+     </Default>
+     <Supported>
+     </Supported>
+    </LiteralData>
+
+    [fileName]
+     Title = fileName
+     Abstract = The file name to store the plot in.
+     minOccurs = 1
+     maxOccurs = 1
+     <MetaData>
+      title = fileName
+     </MetaData>
+     <LiteralData>
+      DataType = string
+      <Default>
+      </Default>
+      <Supported>
+      </Supported>
+     </LiteralData>
+
+     [fileFormat]
+      Title = fileFormat
+      Abstract = The output file format.
+      minOccurs = 1
+      maxOccurs = 1
+      <MetaData>
+       title = fileFormat
+      </MetaData>
+      <LiteralData>
+       DataType = string
+       <Default>
+       </Default>
+       <Supported>
+       </Supported>
+      </LiteralData>
+
+
+ </DataInputs>
+ <DataOutputs>
+  [Result]
+   Title = Time series plot
+   Abstract = The URL of the plot file.
+   <MetaData>
+    title = Time series plot
+   </MetaData>
+   <LiteralData>
+    DataType = string
+    <Default>
+    </Default>
+    <Supported>
+    </Supported>
+   </LiteralData>
+
+
+ </DataOutputs>
